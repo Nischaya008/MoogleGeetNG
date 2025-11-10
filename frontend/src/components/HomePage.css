@@ -1,0 +1,642 @@
+/* HomePage styling matching signup/signin card aesthetics */
+
+.homePage {
+  min-height: 100vh;
+  background: #F5F0E4;
+  padding: 40px 20px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  padding: 12px 20px;
+}
+
+.divider {
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  height: 3px;
+  background-color: #666;
+  border-radius: 5px;
+  opacity: 0.3;
+}
+
+.logo {
+  font-family: 'LocalHelvetica', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #323232;
+  letter-spacing: 0.5px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.greeting {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #323232;
+}
+
+.welcomeSection {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.welcomeText {
+  font-family: 'LocalHelvetica', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #323232;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcomeText > span {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #666;
+}
+
+.actionCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.actionCard {
+  background: #d3d3d3;
+  padding: 32px 36px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  box-shadow: 4px 4px #323232;
+  text-align: left;
+}
+
+.cardTitle {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #323232;
+  margin: 0 0 20px 0;
+}
+
+.joinForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.joinButton {
+  align-self: center;
+  max-width: 200px;
+  width: 100%;
+}
+
+.homeInput {
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  background-color: #fff;
+  box-shadow: 4px 4px #323232;
+  font-size: 15px;
+  font-weight: 600;
+  color: #323232;
+  padding: 5px 10px;
+  outline: none;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.homeInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.homeSelect {
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  background-color: #fff;
+  box-shadow: 4px 4px #323232;
+  font-size: 15px;
+  font-weight: 600;
+  color: #323232;
+  padding: 5px 10px;
+  outline: none;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.homeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 42px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  background-color: #fff;
+  box-shadow: 4px 4px #323232;
+  font-size: 16px;
+  font-weight: 600;
+  color: #323232;
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.homeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.homeButton:hover:not(:disabled) {
+  color: #e8e8e8;
+}
+
+.homeButton:hover:not(:disabled)::before {
+  width: 100%;
+}
+
+.homeButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.logoutBtn {
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 5px;
+  border: 2px solid #d01436;
+  background-color: #fff;
+  box-shadow: 4px 4px #d01436;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d01436;
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.logoutBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #d01436;
+  z-index: -1;
+  transition: all 250ms;
+}
+
+.logoutBtn:hover {
+  color: #fff;
+}
+
+.logoutBtn:hover::before {
+  width: 100%;
+}
+
+.message {
+  color: #35743d;
+  background: #ecffe5;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.error {
+  color: #d01436;
+  background: #fff2f4;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.roomsSection {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-family: 'LocalHelvetica', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #323232;
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #323232;
+}
+
+.noRooms {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.roomsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.roomCard {
+  background: #d3d3d3;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  box-shadow: 4px 4px #323232;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.roomCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px #323232;
+}
+
+.roomCard.locked {
+  border-color: #d01436;
+  box-shadow: 4px 4px #d01436;
+}
+
+.roomCard.locked:hover {
+  box-shadow: 6px 6px #d01436;
+}
+
+.roomCard.open {
+  border-color: #35743d;
+  box-shadow: 4px 4px #35743d;
+}
+
+.roomCard.open:hover {
+  box-shadow: 6px 6px #35743d;
+}
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roomLabel {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #323232;
+  margin-bottom: 4px;
+}
+
+.roomId {
+  font-weight: 400;
+  color: #666;
+  font-family: 'LocalHelvetica', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.roomStatus {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #323232;
+}
+
+.statusLocked {
+  color: #d01436;
+  font-weight: 600;
+}
+
+.statusOpen {
+  color: #35743d;
+  font-weight: 600;
+}
+
+.roomCreator {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #323232;
+  margin-top: 4px;
+}
+
+.creatorName {
+  font-weight: 600;
+  color: #666;
+}
+
+.roomDate {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.roomJoinBtn {
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  background-color: #fff;
+  box-shadow: 4px 4px #323232;
+  font-size: 14px;
+  font-weight: 600;
+  color: #323232;
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  margin-top: 4px;
+}
+
+.roomJoinBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #212121;
+  z-index: -1;
+  transition: all 250ms;
+}
+
+.roomJoinBtn:hover:not(:disabled) {
+  color: #e8e8e8;
+}
+
+.roomJoinBtn:hover:not(:disabled)::before {
+  width: 100%;
+}
+
+.roomJoinBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+}
+
+/* Modal styles */
+.modalBg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modalCard {
+  background: #d3d3d3;
+  padding: 32px 36px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  box-shadow: 4px 4px #323232;
+  min-width: 280px;
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+}
+
+.modalTitle {
+  font-family: 'LocalHelvetica', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #323232;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalField {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalLabel {
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #323232;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.modalButtons .homeButton {
+  flex: 1;
+}
+
+.modalButtons .cancelBtn {
+  flex: 1;
+}
+
+.cancelBtn {
+  padding: 12px 16px;
+  height: 42px;
+  border-radius: 5px;
+  border: 2px solid #666;
+  background-color: #fff;
+  box-shadow: 4px 4px #666;
+  font-size: 16px;
+  font-weight: 600;
+  color: #323232;
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.cancelBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #666;
+  z-index: -1;
+  transition: all 250ms;
+}
+
+.cancelBtn:hover {
+  color: #fff;
+}
+
+.cancelBtn:hover::before {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .homePage {
+    padding: 24px 16px;
+  }
+  
+  .topBar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  
+  .logo {
+    font-size: 28px;
+  }
+  
+  .userInfo {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .divider {
+    margin-bottom: 24px;
+  }
+  
+  .welcomeSection {
+    margin-bottom: 32px;
+  }
+  
+  .actionCards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  
+  .actionCard {
+    padding: 24px 28px;
+  }
+  
+  .joinButton {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .roomsSection {
+    margin-top: 32px;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+  }
+  
+  .roomsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .roomCard {
+    padding: 20px 24px;
+  }
+  
+  .modalBg {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+  
+  .modalCard {
+    padding: 24px 28px;
+    min-width: 280px;
+    max-width: 100%;
+  }
+  
+  .modalTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .modalForm {
+    gap: 16px;
+  }
+  
+  .modalField {
+    gap: 8px;
+  }
+  
+  .modalButtons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .modalButtons .homeButton,
+  .modalButtons .cancelBtn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .roomsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .roomsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+

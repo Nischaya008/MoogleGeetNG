@@ -1,0 +1,117 @@
+/* --- Local font faces -------------------------------------------------- */
+/* Place your downloaded font files under public/fonts/ and ensure names match. */
+/* Helvetica: replace the path if you use a different file name/variant. */
+@font-face {
+  font-family: 'LocalHelvetica';
+  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-weight: 100 900; /* supports multiple weights if file has them */
+  font-style: normal;
+  font-display: swap;
+}
+/* Stratum2: replace the path if you use a different file name/variant. */
+@font-face {
+  font-family: 'LocalStratum2';
+  src: url('/fonts/Stratum2.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Root theme and defaults */
+:root {
+  /* Site-wide default font: Stratum2 via local file, with fallbacks */
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #232d3f;
+  background: #F5F0E4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #F5F0E4;
+  color: #232d3f;
+}
+
+/* Custom Scrollbar Styling */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E4;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  border: 2px solid #323232;
+  border-radius: 5px;
+  box-shadow: 2px 2px #323232;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d3d3d3 #F5F0E4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222436;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root { color: #232d3f; background: #F5F0E4; }
+  body { color: #232d3f; background: #F5F0E4; }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "zoogle",
+  "version": "1.0.0",
+  "description": "Zoogle - Video Conferencing App",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && nodemon app.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:socket": "cd backend && node socket-server.js",
+    "build:frontend": "cd frontend && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
