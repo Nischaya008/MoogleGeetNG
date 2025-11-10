@@ -1,0 +1,192 @@
+/* From Uiverse.io by D3OXY */
+/* DEOXY Was Here */
+
+.form {
+  --background: #d3d3d3;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  padding: 32px 36px;
+  background: var(--background);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  justify-items: stretch;
+  gap: 16px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  width: 100%;
+  max-width: 600px; /* Desktop card width; more compact */
+}
+
+.form > p {
+  color: var(--font-color);
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0 0 6px 0;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  text-align: left;
+  /* Use local Helvetica ttf first, then fallbacks */
+  font-family: 'LocalHelvetica', Helvetica, Arial, sans-serif;
+}
+
+.form > p > span {
+  color: var(--font-color-sub);
+  font-weight: 400;
+  font-size: 17px;
+  /* Use local Stratum2 otf for subtitle */
+  font-family: 'LocalStratum2', 'Stratum2-Bold', Helvetica, Arial, sans-serif;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  grid-column: 1 / -1;
+}
+
+.separator > div {
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--font-color-sub);
+}
+
+.separator > span {
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.oauthButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  width: 100%;
+  height: 42px; /* match input height for clean alignment */
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: all 250ms;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  grid-column: 1 / -1;
+}
+
+.oauthButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.oauthButton:hover {
+  color: #e8e8e8;
+}
+
+.oauthButton:hover::before {
+  width: 100%;
+}
+
+.form > input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Two-column layout for wider, less-vertical form */
+.row { display: contents; }
+
+.textInput {
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+@media (max-width: 640px) {
+  /* Phone layout: single column and shorter inputs/buttons */
+  .form { grid-template-columns: 1fr; padding: 20px 16px; max-width: 300px; }
+  /* Reduce visual length of controls by capping width and centering */
+  .oauthButton { height: 42px; max-width: 260px; margin: 0 auto; }
+  .textInput { height: 40px; max-width: 260px; margin: 0 auto; }
+}
+
+@media (min-width: 769px) {
+  /* Tablet+ layout: reduce horizontal spread */
+  .form { column-gap: 24px; }
+  /* Buttons stay within card, no extension */
+  .oauthButton { width: 100%; margin-left: 0; margin-right: 0; }
+  /* Center inputs within their columns and cap their max width */
+  .textInput { justify-self: center; max-width: 280px; }
+}
+
+@media (min-width: 1024px) {
+  /* Larger desktops: slightly wider but still compact */
+  .form { max-width: 640px; column-gap: 28px; }
+  /* Buttons stay within card */
+  .oauthButton { width: 100%; margin-left: 0; margin-right: 0; }
+  /* Slightly wider inputs while staying centered */
+  .textInput { max-width: 300px; }
+}
+
+/* OTP Form: Make it more compact and less horizontally spread */
+.otpForm {
+  max-width: 520px; /* Narrower than signup form */
+}
+
+@media (min-width: 769px) {
+  /* OTP form: reduce column gap and button extension for tablet+ */
+  .otpForm { column-gap: 20px; }
+  .otpForm .oauthButton { width: 100%; margin-left: 0; margin-right: 0; }
+  .otpForm .textInput { max-width: 240px; }
+}
+
+@media (min-width: 1024px) {
+  /* OTP form: keep it compact on large screens too */
+  .otpForm { max-width: 560px; column-gap: 24px; }
+  .otpForm .textInput { max-width: 260px; }
+}
+
+

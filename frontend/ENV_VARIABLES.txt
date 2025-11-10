@@ -1,0 +1,17 @@
+Frontend Environment Variables for Vercel Deployment
+=====================================================
+
+Copy these variables to Vercel environment variables section:
+
+VITE_API_URL=https://your-backend.railway.app
+VITE_SOCKET_IO_URL=https://your-backend.railway.app
+
+Instructions:
+1. Replace 'your-backend.railway.app' with your actual Railway backend URL
+2. Add these variables for Production, Preview, and Development environments
+3. After adding variables, redeploy your application
+
+Note: For local development, create a .env.local file with:
+VITE_API_URL=http://localhost:5000
+VITE_SOCKET_IO_URL=http://localhost:5000
+

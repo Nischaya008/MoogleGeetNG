@@ -1,0 +1,25 @@
+Backend Environment Variables for Railway Deployment
+====================================================
+
+Copy these variables to Railway environment variables section:
+
+NODE_ENV=production
+PORT=5000
+MONGO_URI=your-mongodb-connection-string
+SESSION_SECRET=your-super-secret-key-min-32-chars
+CLIENT_ORIGIN=https://your-frontend.vercel.app
+FRONTEND_REDIRECT_AFTER_LOGIN=https://your-frontend.vercel.app/home
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_CALLBACK_URL=https://your-backend.railway.app/api/auth/google/callback
+RESEND_API_KEY=your-resend-api-key
+
+Instructions:
+1. Replace all placeholder values with your actual values
+2. Replace 'your-backend.railway.app' with your Railway deployment URL
+3. Replace 'your-frontend.vercel.app' with your Vercel deployment URL
+4. Get MONGO_URI from MongoDB Atlas connection string
+5. Generate SESSION_SECRET (32+ random characters)
+6. Get Google OAuth credentials from Google Cloud Console
+7. Get RESEND_API_KEY from Resend dashboard (optional for email OTP)
+
